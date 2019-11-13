@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Movies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= sortable "title"%></th>
+      <th><%= sortable "total_gross", "Total Gross" %></th>
+      <th><%= sortable "released_at", "Released at" %></th>
+      <th><%= sortable "duration" %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.total_gross %></td>
+        <td><%= movie.released_at %></td>
+        <td><%= movie.duration %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
